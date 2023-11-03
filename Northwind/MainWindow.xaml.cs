@@ -30,11 +30,6 @@ namespace Northwind
             Write();
         }
 
-        private void btnCarica_Click(object sender, RoutedEventArgs e)
-        {
-            //drgDati.ItemsSource = sc.AllCustomers();
-        }
-
         public void Write()
         {
             StreamWriter sw = new StreamWriter("test.txt");
@@ -72,6 +67,15 @@ namespace Northwind
         {
             UnitTest unitTest = new UnitTest();
             unitTest.TestSum();
+        }
+
+        private void btnTestRecord_Click(object sender, RoutedEventArgs e)
+        {
+            CustomersTest customersTest = new CustomersTest();
+            for (int k = 0; k < 10; k++)
+            {
+                customersTest.CountCustomersTest();
+            }
         }
     }
 }
